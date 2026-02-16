@@ -1,73 +1,101 @@
-# Welcome to your Lovable project
+# Signallab Brief
 
-## Project info
+> Transform messy bookmarks into a clean AI intelligence briefing.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**Signallab Brief** is a sophisticated AI research dashboard that aggregates, classifies, and synthesizes content from across the web into actionable intelligence reports.
 
-## How can I edit this code?
+![Built with React](https://img.shields.io/badge/React-18-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-blue) ![Vite](https://img.shields.io/badge/Vite-5-purple)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Quick Add Bar** — Paste any URL to instantly add articles to your research inbox
+- **Content Inbox** — Cards for newly added links with AI "Simplify" buttons and key takeaway bullets
+- **Briefing Deck** — AI-synthesized reports with a live typewriter animation effect
+- **Project Intelligence Hub** — Sidebar "Labs" to organize research by topic (LLM Trends, Market Analysis, etc.)
+- **Signal Strength Meter** — Visual gauge showing data density of the current brief
+- **Source Terminal** — Real-time scrolling log of URLs scanned and insights extracted
+- **Themes Cluster** — Auto-groups links by topic with colorful, minimalist badges
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech Stack
 
-**Use your preferred IDE**
+| Technology | Purpose |
+|---|---|
+| **React 18** | UI framework with hooks and functional components |
+| **TypeScript** | Type-safe development |
+| **Vite** | Fast build tool and dev server |
+| **Tailwind CSS** | Utility-first styling with custom design tokens |
+| **shadcn/ui** | Pre-built accessible UI components (Card, Tabs, Progress, ScrollArea) |
+| **Lucide React** | Icon library (Flask, Scan, Zap, Terminal, etc.) |
+| **TanStack React Query** | Data fetching and state management |
+| **React Router** | Client-side routing |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
+src/
+├── assets/                  # Static assets
+├── components/
+│   ├── ui/                  # shadcn/ui base components
+│   ├── BriefingDeck.tsx     # AI-synthesized report panel with typewriter effect
+│   ├── ContentInbox.tsx     # Inbox cards with simplify & takeaway features
+│   ├── MorningBrief.tsx     # Daily intelligence summary hero
+│   ├── ProjectHub.tsx       # Sidebar with research lab folders
+│   ├── QuickAddBar.tsx      # URL input bar
+│   ├── SignalStrength.tsx   # Data density progress meter
+│   ├── SourceTerminal.tsx   # Live-scrolling scan log
+│   └── ThemesCluster.tsx    # Topic grouping with badges
+├── hooks/                   # Custom React hooks
+├── lib/                     # Utility functions
+├── pages/
+│   ├── Index.tsx            # Main dashboard layout
+│   └── NotFound.tsx         # 404 page
+├── App.tsx                  # Root app with routing
+├── index.css                # Design system tokens & utilities
+└── main.tsx                 # Entry point
+```
 
-Follow these steps:
+## Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- npm, yarn, or bun
+
+### Installation
+
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd signallab-brief
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:5173`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+npm run preview
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## License
 
-## What technologies are used for this project?
+This project is licensed under the **MIT License**.
 
-This project is built with:
+## Acknowledgements
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- [shadcn/ui](https://ui.shadcn.com/) — Beautiful, accessible component library
+- [Lucide](https://lucide.dev/) — Elegant open-source icon set
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework
+- [Vite](https://vitejs.dev/) — Next-generation frontend tooling
+- [Linear](https://linear.app/) — Design inspiration for the clean, modern aesthetic

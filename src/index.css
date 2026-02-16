@@ -6,54 +6,54 @@
 
 @layer base {
   :root {
-    --background: 222 47% 3%;
+    --background: 226 71% 4%;
     --foreground: 210 20% 90%;
 
-    --card: 222 40% 5%;
+    --card: 226 60% 6%;
     --card-foreground: 210 20% 90%;
 
-    --popover: 222 40% 5%;
+    --popover: 226 60% 6%;
     --popover-foreground: 210 20% 90%;
 
-    --primary: 187 85% 53%;
-    --primary-foreground: 222 47% 3%;
+    --primary: 270 70% 60%;
+    --primary-foreground: 226 71% 4%;
 
-    --secondary: 222 30% 10%;
+    --secondary: 226 40% 10%;
     --secondary-foreground: 210 15% 60%;
 
-    --muted: 222 25% 8%;
+    --muted: 226 30% 8%;
     --muted-foreground: 215 15% 45%;
 
-    --accent: 187 60% 15%;
-    --accent-foreground: 187 85% 65%;
+    --accent: 270 50% 15%;
+    --accent-foreground: 270 70% 72%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 187 30% 12%;
-    --input: 222 25% 12%;
-    --ring: 187 85% 53%;
+    --border: 270 30% 14%;
+    --input: 226 30% 12%;
+    --ring: 270 70% 60%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 222 47% 4%;
+    --sidebar-background: 226 71% 5%;
     --sidebar-foreground: 210 15% 55%;
-    --sidebar-primary: 187 85% 53%;
-    --sidebar-primary-foreground: 222 47% 3%;
-    --sidebar-accent: 222 30% 8%;
-    --sidebar-accent-foreground: 187 85% 65%;
-    --sidebar-border: 187 20% 10%;
-    --sidebar-ring: 187 85% 53%;
+    --sidebar-primary: 270 70% 60%;
+    --sidebar-primary-foreground: 226 71% 4%;
+    --sidebar-accent: 226 40% 9%;
+    --sidebar-accent-foreground: 270 70% 72%;
+    --sidebar-border: 270 20% 12%;
+    --sidebar-ring: 270 70% 60%;
 
     /* Custom tokens */
-    --glow-cyan: 187 85% 53%;
-    --surface-elevated: 222 35% 7%;
-    --badge-ai: 262 70% 55%;
+    --glow-cyan: 270 70% 60%;
+    --surface-elevated: 226 50% 7%;
+    --badge-ai: 270 70% 60%;
     --badge-market: 160 60% 45%;
-    --badge-code: 187 85% 53%;
+    --badge-code: 200 80% 55%;
     --badge-design: 30 80% 55%;
     --badge-news: 340 65% 55%;
-    --terminal-bg: 222 47% 2%;
+    --terminal-bg: 226 71% 3%;
     --terminal-text: 160 60% 55%;
   }
 
@@ -87,7 +87,7 @@
   }
 
   .text-gradient-cyan {
-    background: linear-gradient(135deg, hsl(187 85% 65%), hsl(187 60% 45%));
+    background: linear-gradient(135deg, hsl(270 70% 72%), hsl(270 50% 50%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -133,8 +133,8 @@
       0deg,
       transparent,
       transparent 2px,
-      hsl(187 85% 53% / 0.015) 2px,
-      hsl(187 85% 53% / 0.015) 4px
+      hsl(270 70% 60% / 0.015) 2px,
+      hsl(270 70% 60% / 0.015) 4px
     );
     pointer-events: none;
   }

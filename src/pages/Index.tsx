@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { FlaskConical, Scan } from "lucide-react";
 import ProjectHub from "@/components/ProjectHub";
 import BriefingDeck from "@/components/BriefingDeck";
 import SignalStrength from "@/components/SignalStrength";
 import SourceTerminal from "@/components/SourceTerminal";
 import QuickAddBar from "@/components/QuickAddBar";
 import ContentInbox from "@/components/ContentInbox";
+import StatsBar from "@/components/StatsBar";
+import HeaderBar from "@/components/HeaderBar";
 
 const initialItems = [
   {
@@ -67,27 +68,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <FlaskConical className="h-5 w-5 text-primary" />
-            <span className="text-base font-semibold tracking-tight text-foreground">Signallab</span>
-            <span className="font-mono text-[10px] text-primary border border-primary/30 rounded px-1.5 py-0.5">BRIEF</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Scan className="h-3.5 w-3.5 text-primary animate-pulse-glow" />
-              <span className="font-mono text-[10px] text-muted-foreground">LIVE ANALYSIS</span>
-            </div>
-            <div className="h-2 w-2 rounded-full bg-primary animate-pulse-glow" />
-          </div>
-        </div>
-      </header>
+      <HeaderBar />
 
-      {/* Quick Add Bar */}
-      <div className="mx-auto max-w-7xl px-6 pt-6">
+      {/* Quick Add Bar + Stats */}
+      <div className="mx-auto max-w-7xl px-6 pt-6 space-y-4">
         <QuickAddBar onAdd={handleAddUrl} />
+        <StatsBar />
       </div>
 
       {/* Main Layout */}

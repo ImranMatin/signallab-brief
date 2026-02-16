@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,53 +6,55 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 95%;
+    --background: 222 47% 3%;
+    --foreground: 210 20% 90%;
 
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 95%;
+    --card: 222 40% 5%;
+    --card-foreground: 210 20% 90%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 222 40% 5%;
+    --popover-foreground: 210 20% 90%;
 
-    --primary: 262 80% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 187 85% 53%;
+    --primary-foreground: 222 47% 3%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 70%;
+    --secondary: 222 30% 10%;
+    --secondary-foreground: 210 15% 60%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 50%;
+    --muted: 222 25% 8%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 262 60% 20%;
-    --accent-foreground: 262 80% 75%;
+    --accent: 187 60% 15%;
+    --accent-foreground: 187 85% 65%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 14%;
-    --input: 0 0% 14%;
-    --ring: 262 80% 60%;
+    --border: 187 30% 12%;
+    --input: 222 25% 12%;
+    --ring: 187 85% 53%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 70%;
-    --sidebar-primary: 262 80% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 0 0% 14%;
-    --sidebar-ring: 262 80% 60%;
+    --sidebar-background: 222 47% 4%;
+    --sidebar-foreground: 210 15% 55%;
+    --sidebar-primary: 187 85% 53%;
+    --sidebar-primary-foreground: 222 47% 3%;
+    --sidebar-accent: 222 30% 8%;
+    --sidebar-accent-foreground: 187 85% 65%;
+    --sidebar-border: 187 20% 10%;
+    --sidebar-ring: 187 85% 53%;
 
     /* Custom tokens */
-    --glow-primary: 262 80% 60%;
-    --surface-elevated: 0 0% 9%;
+    --glow-cyan: 187 85% 53%;
+    --surface-elevated: 222 35% 7%;
     --badge-ai: 262 70% 55%;
     --badge-market: 160 60% 45%;
-    --badge-code: 200 70% 50%;
+    --badge-code: 187 85% 53%;
     --badge-design: 30 80% 55%;
     --badge-news: 340 65% 55%;
+    --terminal-bg: 222 47% 2%;
+    --terminal-text: 160 60% 55%;
   }
 
   .dark {
@@ -72,19 +74,27 @@
 }
 
 @layer utilities {
-  .glow-primary {
-    box-shadow: 0 0 20px -5px hsl(var(--glow-primary) / 0.3);
+  .font-mono-lab {
+    font-family: 'JetBrains Mono', monospace;
   }
 
-  .text-gradient {
-    background: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 60%));
+  .glow-cyan {
+    box-shadow: 0 0 20px -5px hsl(var(--glow-cyan) / 0.25);
+  }
+
+  .glow-cyan-strong {
+    box-shadow: 0 0 30px -5px hsl(var(--glow-cyan) / 0.4);
+  }
+
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, hsl(187 85% 65%), hsl(187 60% 45%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .text-gradient-purple {
-    background: linear-gradient(135deg, hsl(262 80% 75%), hsl(262 60% 55%));
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(210 20% 95%), hsl(215 15% 55%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -92,5 +102,40 @@
 
   .surface-elevated {
     background-color: hsl(var(--surface-elevated));
+  }
+
+  .terminal-bg {
+    background-color: hsl(var(--terminal-bg));
+  }
+
+  .border-glow {
+    border-color: hsl(var(--glow-cyan) / 0.3);
+  }
+
+  /* Typewriter cursor blink */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: hsl(var(--primary)); }
+  }
+
+  .typewriter-cursor::after {
+    content: '▎';
+    color: hsl(var(--primary));
+    animation: blink-caret 1s step-end infinite;
+  }
+
+  /* Scanline effect for terminal */
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(187 85% 53% / 0.015) 2px,
+      hsl(187 85% 53% / 0.015) 4px
+    );
+    pointer-events: none;
   }
 }

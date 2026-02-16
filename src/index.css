@@ -6,22 +6,22 @@
 
 @layer base {
   :root {
-    --background: 226 71% 4%;
+    --background: 230 55% 8%;
     --foreground: 210 20% 90%;
 
-    --card: 226 60% 6%;
+    --card: 230 50% 10%;
     --card-foreground: 210 20% 90%;
 
-    --popover: 226 60% 6%;
+    --popover: 230 50% 10%;
     --popover-foreground: 210 20% 90%;
 
     --primary: 270 70% 60%;
-    --primary-foreground: 226 71% 4%;
+    --primary-foreground: 230 55% 8%;
 
-    --secondary: 226 40% 10%;
+    --secondary: 230 40% 14%;
     --secondary-foreground: 210 15% 60%;
 
-    --muted: 226 30% 8%;
+    --muted: 230 35% 12%;
     --muted-foreground: 215 15% 45%;
 
     --accent: 270 50% 15%;
@@ -31,29 +31,29 @@
     --destructive-foreground: 0 0% 100%;
 
     --border: 270 30% 14%;
-    --input: 226 30% 12%;
+    --input: 230 35% 15%;
     --ring: 270 70% 60%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 226 71% 5%;
+    --sidebar-background: 230 55% 9%;
     --sidebar-foreground: 210 15% 55%;
     --sidebar-primary: 270 70% 60%;
-    --sidebar-primary-foreground: 226 71% 4%;
-    --sidebar-accent: 226 40% 9%;
+    --sidebar-primary-foreground: 230 55% 8%;
+    --sidebar-accent: 230 40% 13%;
     --sidebar-accent-foreground: 270 70% 72%;
     --sidebar-border: 270 20% 12%;
     --sidebar-ring: 270 70% 60%;
 
     /* Custom tokens */
     --glow-cyan: 270 70% 60%;
-    --surface-elevated: 226 50% 7%;
+    --surface-elevated: 230 48% 11%;
     --badge-ai: 270 70% 60%;
     --badge-market: 160 60% 45%;
     --badge-code: 200 80% 55%;
     --badge-design: 30 80% 55%;
     --badge-news: 340 65% 55%;
-    --terminal-bg: 226 71% 3%;
+    --terminal-bg: 230 55% 6%;
     --terminal-text: 160 60% 55%;
   }
 

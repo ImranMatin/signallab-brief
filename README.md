@@ -2,9 +2,19 @@
 
 > Transform messy bookmarks into a clean AI intelligence briefing.
 
-**Signallab Brief** is a sophisticated AI research dashboard that aggregates, classifies, and synthesizes content from across the web into actionable intelligence reports.
+**Signallab Brief** is a sophisticated AI research dashboard that aggregates, classifies, and synthesizes content from across the web into actionable intelligence reports. Built for researchers, developers, and knowledge workers who need to stay on top of rapidly evolving fields.
 
 ![Built with React](https://img.shields.io/badge/React-18-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-blue) ![Vite](https://img.shields.io/badge/Vite-5-purple)
+
+---
+
+## The Problem
+
+Professionals juggle dozens of tabs, bookmarks, and newsletters daily. Critical insights get buried in noise. There's no unified way to **collect**, **organize**, and **synthesize** web content into a clear, prioritized intelligence brief — until now.
+
+## What We Built
+
+**Signallab Brief** is an AI-powered research command center that turns chaotic web content into structured intelligence. Paste any URL and watch it get classified, analyzed, and woven into a live briefing deck — complete with confidence scores, reading times, and exportable reports.
 
 ---
 
@@ -12,11 +22,14 @@
 
 - **Quick Add Bar** — Paste any URL to instantly add articles to your research inbox
 - **Content Inbox** — Cards for newly added links with AI "Simplify" buttons and key takeaway bullets
-- **Briefing Deck** — AI-synthesized reports with a live typewriter animation effect
-- **Project Intelligence Hub** — Sidebar "Labs" to organize research by topic (LLM Trends, Market Analysis, etc.)
-- **Signal Strength Meter** — Visual gauge showing data density of the current brief
+- **Briefing Deck** — AI-synthesized reports across 5 domains (LLM Trends, Market, Dev Tooling, Design Systems, Industry News) with live typewriter animation
+- **Keyboard Shortcuts** — Press 1-5 to instantly switch between briefing topics
+- **Export to Markdown** — One-click export of any briefing as a `.md` file
+- **Reading Time Estimates** — Know how long each brief takes to read
+- **Project Intelligence Hub** — Sidebar "Labs" to organize research by topic with live status indicators
+- **Signal Strength Meter** — Visual gauge showing data density and confidence metrics
 - **Source Terminal** — Real-time scrolling log of URLs scanned and insights extracted
-- **Themes Cluster** — Auto-groups links by topic with colorful, minimalist badges
+- **Stats Overview Bar** — At-a-glance metrics for briefs generated, sources scanned, insights extracted, and topics tracked
 
 ## Tech Stack
 
@@ -25,7 +38,7 @@
 | **React 18** | UI framework with hooks and functional components |
 | **TypeScript** | Type-safe development |
 | **Vite** | Fast build tool and dev server |
-| **Tailwind CSS** | Utility-first styling with custom design tokens |
+| **Tailwind CSS** | Utility-first styling with custom HSL design tokens |
 | **shadcn/ui** | Pre-built accessible UI components (Card, Tabs, Progress, ScrollArea) |
 | **Lucide React** | Icon library (Flask, Scan, Zap, Terminal, etc.) |
 | **TanStack React Query** | Data fetching and state management |
@@ -35,17 +48,16 @@
 
 ```
 src/
-├── assets/                  # Static assets
 ├── components/
 │   ├── ui/                  # shadcn/ui base components
-│   ├── BriefingDeck.tsx     # AI-synthesized report panel with typewriter effect
+│   ├── BriefingDeck.tsx     # AI-synthesized reports with typewriter effect & export
 │   ├── ContentInbox.tsx     # Inbox cards with simplify & takeaway features
-│   ├── MorningBrief.tsx     # Daily intelligence summary hero
+│   ├── HeaderBar.tsx        # Navigation header with GitHub link
 │   ├── ProjectHub.tsx       # Sidebar with research lab folders
 │   ├── QuickAddBar.tsx      # URL input bar
 │   ├── SignalStrength.tsx   # Data density progress meter
 │   ├── SourceTerminal.tsx   # Live-scrolling scan log
-│   └── ThemesCluster.tsx    # Topic grouping with badges
+│   └── StatsBar.tsx         # Overview metrics bar
 ├── hooks/                   # Custom React hooks
 ├── lib/                     # Utility functions
 ├── pages/
